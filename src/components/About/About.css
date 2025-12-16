@@ -1,0 +1,149 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+.about-title {
+  position: relative;
+}
+.about-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+.about-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 60px;
+  width: 200px;
+}
+.about-sections {
+  display: flex;
+  gap: 80px;
+}
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-para {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  font-weight: 400;
+}
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-skill {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  transition: 0.3s;
+}
+.about-skill p {
+  min-width: 150px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.about-skill hr {
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 106.28%);
+}
+.about-left img {
+  height: 410px;
+  width: 390px;
+  border-radius: 10px;
+}
+.about-skill:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* ------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    gap: 80px;
+    margin: 50px 70px;
+    align-items: start;
+    width: 100%;
+  }
+  .about-title h1 {
+    font-size: 50px;
+    padding: 0;
+    margin-left: 130px;
+  }
+  .about-title img {
+    width: 130px;
+    right: -20px;
+  }
+  .about-sections {
+    flex-direction: column;
+  }
+  .about-left {
+    display: none;
+  }
+  .about-para {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .about-skill {
+    gap: 20px;
+    align-items: center;
+  }
+  .about-sections p {
+    font-size: 20px;
+  }
+  .about-skill hr {
+    height: 6px;
+  }
+}
+/* -------------------- */
+@media (max-width: 768px) {
+  .about {
+    gap: 80px;
+    margin: 50px 70px;
+    align-items: start;
+    width: 100%;
+  }
+  .about-title h1 {
+    font-size: 50px;
+    padding: 0;
+    margin-left: 130px;
+  }
+  .about-title img {
+    width: 130px;
+    right: -20px;
+  }
+  .about-sections {
+    flex-direction: column;
+  }
+  .about-left {
+    display: none;
+  }
+  .about-para {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .about-skill {
+    gap: 20px;
+    align-items: center;
+  }
+  .about-sections p {
+    font-size: 20px;
+  }
+  .about-skill hr {
+    height: 6px;
+  }
+}

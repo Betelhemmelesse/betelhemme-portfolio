@@ -1,0 +1,186 @@
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+.mywork-title {
+  position: relative;
+}
+.mywork-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+.mywork-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 60px;
+  width: 200px;
+}
+.mywork-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.mywork-container img {
+  box-sizing: border-box;
+  width: 350px;
+  height: 280px;
+  transition: 0.3s;
+  cursor: pointer;
+  /* object-fit: cover; */
+}
+.mywork-container img:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+  border: 4px solid #ff00ff;
+  transition: 0.3s;
+}
+.mywork-showmore {
+  display: flex;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 30px 60px;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.mywork-showmore img {
+  height: 25px;
+  width: 25px;
+}
+.mywork-showmore:hover {
+  gap: 30px;
+  transition: 0.6s;
+}
+
+/* ----------------------------------- */
+/* ... existing CSS ... */
+
+.mywork-actions {
+  /* Style the container that holds both buttons */
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  margin-top: 50px; /* Add some space above the buttons */
+  gap: 20px; /* Space between the two buttons if both are shown temporarily */
+}
+
+/* Base styles for both show more/less containers */
+.mywork-showmore {
+  display: flex;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid #e4e4e4;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mywork-showmore:hover {
+  background-color: #f0f0f0;
+}
+
+/* CSS class to rotate the arrow image for "Show Less" */
+.rotate-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+@media (max-width: 1024px) {
+  .mywork {
+    gap: 20px;
+    margin: 50px 70px;
+    align-items: start;
+  }
+  /* .mywork-title{
+    
+  } */
+  .mywork-title h1 {
+    padding: 0;
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 130px;
+  }
+  .mywork-title img {
+    width: 130px;
+    margin-right: -20px;
+  }
+  .mywork-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 25px;
+  }
+
+  .mywork-showmore {
+    padding: 20px 40px;
+    font-size: 18px;
+    margin: 50px auto;
+    cursor: pointer;
+  }
+}
+@media (max-width: 768px) {
+  .mywork {
+    /* Adjust container margins for smaller screens */
+    margin: 40px 20px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .mywork-title h1 {
+    font-size: 40px;
+    margin-left: 0; /* Remove left margin added by the tablet query */
+    text-align: center; /* Center the H1 title */
+    padding: 0;
+  }
+
+  .mywork-title {
+    /* Ensure the title container allows H1 to center */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mywork-title img {
+    height: 40px;
+    width: 100px;
+    right: unset; /* Remove absolute positioning that might cause issues */
+    position: static; /* Place image below the H1 if needed, or adjust positioning */
+    margin-top: 10px;
+  }
+
+  .mywork-container {
+    /* Change the grid layout to a single column */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    /* ADD THIS LINE to center the items horizontally within their grid cells */
+    justify-items: center;
+    width: 100%;
+  }
+
+  .mywork-container img {
+    /* Constrain the size of images for better mobile display */
+    width: 90vw; /* Take up most of the viewport width */
+    max-width: 350px; /* But don't get too large on big phones */
+    height: auto; /* Maintain aspect ratio (good practice for images) */
+    object-fit: cover;
+  }
+
+  .mywork-actions {
+    /* Ensure the buttons container centers correctly on mobile */
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .mywork-showmore {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
